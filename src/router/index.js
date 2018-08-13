@@ -7,8 +7,14 @@ export default new Router({
   routes: [
     {
       path: '/',
+      alias: '/index',
       name: 'HelloWorld',
       component: () => import('@/views/HelloWorld')
+    },
+    {
+      path: '/info',
+      name: '信息列表',
+      component: () => import('@/views/Info/index')
     }
   ]
 });

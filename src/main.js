@@ -10,7 +10,9 @@ import axios from 'axios';
 import storage from 'good-storage';
 import '../src/assets/js/flex';
 import fastclick from 'fastclick';
-import filters from './assets/js/filters';
+import {Tabbar, TabbarItem, NavBar} from 'vant';
+
+Vue.use(Tabbar).use(TabbarItem).use(NavBar);
 axios.defaults.baseURL = process.env.API_ROOT;
 axios.defaults.timeout = 5000;
 
@@ -23,10 +25,6 @@ Vue.use(component);
  * 解决移动端点击事件延迟
  */
 fastclick.attach(document.body);
-/**
- * 过滤器
- */
-Object.keys(filters).forEach(key => Vue.filter(key, filters[key]));
 
 /* eslint-disable no-new */
 new Vue({

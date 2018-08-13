@@ -9,7 +9,8 @@ const sourceMapEnabled = isProduction
 module.exports = {
   loaders: utils.cssLoaders({
     sourceMap: sourceMapEnabled,
-    extract: isProduction
+    extract: isProduction,
+    usePostCSS: true
   }),
   cssSourceMap: sourceMapEnabled,
   cacheBusting: config.dev.cacheBusting,
@@ -18,6 +19,5 @@ module.exports = {
     source: 'src',
     img: 'src',
     image: 'xlink:href'
-  },
-  postcss:[require('postcss-px2rem')({'remUnit':72,'baseDpr':2})]
+  }
 }

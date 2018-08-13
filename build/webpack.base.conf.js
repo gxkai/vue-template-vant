@@ -40,9 +40,6 @@ module.exports = {
   },
   plugins: [
     new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery",
-      "window.jQuery": "jquery"
     })
   ],
   module: {
@@ -89,7 +86,16 @@ module.exports = {
       {
         test: /.exec.js$/,
         use: [ 'script-loader' ]
+      },
+      {
+        test: /\.less$/,
+        loader: "style-loader!css-loader!less-loader",
+      }, {
+        test: /\.css$/,
+        include: path.resolve(__dirname, './node_modules'),
+        loader: 'style-loader!css-loader!postcss-loader'
       }
+
     ]
   },
   node: {

@@ -24,3 +24,15 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 ``` javascript
 this.pageList.forEach(e => { e.imgUrl = this.$http.get(this.getImgURL(e.fileId, 'LOGO')); });
 ```
+## vant ui
+```
+https://youzan.github.io/vant/#/zh-CN
+```
+## views文件夹下格式命名
+
+```
+模块名-具体页面名称
+index.vue 默认为该模块的列表页面
+view.vue 默认为list下列表子项跳转的详情页
+其余页面语义化命名
+```
