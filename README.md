@@ -38,6 +38,20 @@ view.vue 默认为list下列表子项跳转的详情页
 
 组件命名
 模块名+具体功能名（例：InfoItem.vue）
+
+## css class 格式命名
+```
+block+element+modify 
+(例
+info(最外层div)
+info-container（主体部分）
+info-container-text（text块）
+)
+```
+## 图片懒加载
+```
+原先 <img src="">
+现在 <img v-lazy="">
 ```
 ## 第三方插件地址
 ```

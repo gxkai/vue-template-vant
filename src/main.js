@@ -10,9 +10,13 @@ import axios from 'axios';
 import storage from 'good-storage';
 import '../src/assets/js/flex';
 import fastclick from 'fastclick';
-import {Tabbar, TabbarItem, NavBar} from 'vant';
+import {Tabbar, TabbarItem, NavBar, Lazyload} from 'vant';
 
-Vue.use(Tabbar).use(TabbarItem).use(NavBar);
+Vue.use(Tabbar).use(TabbarItem).use(NavBar).use(Lazyload, {
+  loading: require('./assets/image/lazyLoad/loading.gif'),
+  error: require('./assets/image/lazyLoad/default.png'),
+  attempt: 1
+});
 axios.defaults.baseURL = process.env.API_ROOT;
 axios.defaults.timeout = 5000;
 

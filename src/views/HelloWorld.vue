@@ -11,6 +11,7 @@
       />
 
       <div>
+        <img v-lazy="">
       </div>
       <van-tabbar v-model="active">
         <van-tabbar-item icon="shop">首页</van-tabbar-item>
