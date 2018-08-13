@@ -31,8 +31,15 @@ https://youzan.github.io/vant/#/zh-CN
 ## views文件夹下格式命名
 
 ```
-模块名-具体页面名称
+模块名-具体模块名称(例：Info)
 index.vue 默认为该模块的列表页面
 view.vue 默认为list下列表子项跳转的详情页
 其余页面语义化命名
+
+组件命名
+模块名+具体功能名（例：InfoItem.vue）
+```
+## 第三方插件地址
+```
+https://github.com/vuejs/awesome-vue
 ```

@@ -1,5 +1,6 @@
 <template>
-    <div class="header">
+  <div class="info">
+    <div class="info-header">
       <van-nav-bar
         ref="header"
         :title="$route.name"
@@ -7,12 +8,13 @@
         left-arrow
         @click-left="onClickLeft"
       />
-      <div class="container">
-        <new-info-item></new-info-item>
-        <new-info-item></new-info-item>
-        <new-info-item></new-info-item>
-      </div>
     </div>
+    <div class="info-container">
+      <new-info-item/>
+      <new-info-item/>
+      <new-info-item/>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -26,20 +28,21 @@
     props: {},
 
     data() {
-      return {
-      };
+      return {};
     },
 
     computed: {},
 
     watch: {},
 
-    created() {},
+    created() {
+    },
 
     mounted() {
     },
 
-    destroyed() {},
+    destroyed() {
+    },
 
     methods: {
       onClickLeft() {
@@ -50,7 +53,7 @@
 </script>
 
 <style scoped>
-  .container {
+  .info-container {
     background-color: rgba(241, 239, 240, 1);
     height: 100vh;
   }

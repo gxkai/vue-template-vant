@@ -12,7 +12,7 @@ export default new Router({
       component: () => import('@/views/HelloWorld')
     },
     {
-      path: '/info',
+      path: '/info/',
       name: '信息列表',
       component: () => import('@/views/Info/index')
     }
